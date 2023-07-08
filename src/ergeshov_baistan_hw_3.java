@@ -22,7 +22,7 @@ public class ergeshov_baistan_hw_3 {
         double[] digits = {0.5,0.8,-0.2,0.9,-0.6,-0.1,0.4};
         for (int i = 0; i < digits.length; i++) {
             for (int j = i+1; j < digits.length-1; j++) {
-                if(digits[i] < digits[j]){
+                if(digits[i] > digits[j]){
                     double temp = digits[i];
                     digits[i] = digits[j];
                     digits[j] = temp;
