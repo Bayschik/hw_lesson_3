@@ -1,7 +1,7 @@
 import java.util.Arrays;
 public class ergeshov_baistan_hw_3 {
     public static void main(String[] args) {
-        double[] numbers = {0.5,0.8,-0.2,0.9,-0.6,-0.1,0.4,-0.8,0.6,-0.3,-0.7,0.2,-0.9,0.7,-0.4};
+        /*double[] numbers = {0.5,0.8,-0.2,0.9,-0.6,-0.1,0.4,-0.8,0.6,-0.3,-0.7,0.2,-0.9,0.7,-0.4};
         double summ = 0;
         int count = 0;
         boolean findLessNumbers = false;
@@ -16,11 +16,12 @@ public class ergeshov_baistan_hw_3 {
             }
         }
         System.out.println(summ + "/" + count);
+         */
 
 
-        double[] digits = {0.5,0.8,-0.2,0.9,-0.6,-0.1,0.4,-0.8,0.6,-0.3,-0.7,0.2,-0.9,0.7,-0.4};
-        for (int i = 1; i < digits.length; i++) {
-            for (int j = 0; j < digits.length; j++) {
+        double[] digits = {0.5,0.8,-0.2,0.9,-0.6,-0.1,0.4};
+        for (int i = 0; i < digits.length; i++) {
+            for (int j = i+1; j < digits.length-1; j++) {
                 if(digits[i] < digits[j]){
                     double temp = digits[i];
                     digits[i] = digits[j];
@@ -28,6 +29,8 @@ public class ergeshov_baistan_hw_3 {
                 }
             }
         }
-        System.out.println(Arrays.toString(digits));
+        for (int i = 0; i < digits.length; i++) {
+            System.out.println(Arrays.toString(digits));
+        }
     }
 }
