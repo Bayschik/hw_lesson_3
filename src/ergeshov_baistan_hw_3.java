@@ -17,17 +17,17 @@ public class ergeshov_baistan_hw_3 {
         }
         System.out.println(summ + "/" + count);
 
-
-
         double[] digits = {0.5,0.8,-0.2,0.9,-0.6,-0.1,0.4};
-        for (int i = 0; i < digits.length; i++) {
-            for (int j = i+1; j < digits.length-1; j++) {
-                if(digits[i] > digits[j]){
-                    double temp = digits[i];
-                    digits[i] = digits[j];
-                    digits[j] = temp;
+        for (int i = 0; i < digits.length-1; i++) {
+            int minIndex = i;
+            for (int j = i+1; j < digits.length; j++) {
+                if (digits[j] < digits[minIndex]) {
+                    minIndex = j;
                 }
             }
+            double temp = digits[minIndex];
+            digits[minIndex] = digits[i];
+            digits[i] = temp;
         }
         for (int i = 0; i < digits.length; i++) {
             System.out.println(Arrays.toString(digits));
